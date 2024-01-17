@@ -13,14 +13,18 @@
 </script>
 
 <div class="loading">
-    loading data{[...Array(i+1)].map(d => '.').join('')}
+    <div>loading data{[...Array(i+1)].map(d => '.').join('')}</div>
 </div>
 
 <style>
     .loading {
-        text-align: center;
-        place-items: center;
+        flex-flow: column;
+        display: flex;
         height: 100%;
+        padding-top: 20%;
+        padding-bottom: 20%;
+        align-items: center;
+        justify-content: center;
         opacity: 0.4;
     }
 </style>
