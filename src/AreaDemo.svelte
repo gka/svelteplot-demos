@@ -1,11 +1,18 @@
 <script lang="ts">
-    import aapl from './assets/aapl.csv'; 
+    import Loading from './shared/Loading.svelte';
+    import { loadData } from './utils.js'; 
     import { Plot, Line, AreaY, RuleY } from 'svelteplot';
-  </script>
+
+    const aapl = loadData('aapl.csv');
+</script>
   
-  <Plot grid height={300} title="Area, line + rule">
-      <AreaY data={aapl} x="Date" y="Close" opacity={0.25} />
-      <Line data={aapl} x="Date" y="Close"  />
-      <RuleY data={[0]} />
-  </Plot>
-  
+{#await aapl}
+<Loading />
+{:then data} 
+<Plot grid height={300} title="Area, line + rule">
+    <AreaY {data} x="Date" y="Close" opacity={0.25} />
+    <Line {data} x="Date" y="Close"  />
+    <RuleY data={[0]} />
+</Plot>
+{/await}
+

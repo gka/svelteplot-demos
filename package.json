@@ -13,6 +13,7 @@
     "@rollup/plugin-dsv": "^3.0.4",
     "@sveltejs/vite-plugin-svelte": "^3.0.1",
     "@tsconfig/svelte": "^5.0.2",
+    "@types/d3-fetch": "^3.0.7",
     "d3-dsv": "^3.0.1",
     "svelte": "^5.0.0-next.35",
     "svelte-check": "^3.6.3",
@@ -21,6 +22,7 @@
     "vite": "^5.0.11"
   },
   "dependencies": {
+    "d3-fetch": "^3.0.1",
     "svelteplot": "^0.0.1-alpha.24"
   }
 }
