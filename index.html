@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Svelte + TS</title>
+    <style>
+      :root {
+        font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+        line-height: 1.5;
+        font-weight: 400;
+
+        color-scheme: light dark;
+        color: rgba(255, 255, 255, 0.87);
+        background-color: #242424;
+
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        --svelteplot-tooltip-bg: #fff;
+        --svelteplot-tooltip-border: #bbb;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --svelteplot-tooltip-bg: #242424;
+          --svelteplot-tooltip-border: #555;
+        }
+      }
+
+      a {
+        font-weight: 500;
+        color: #646cff;
+        text-decoration: inherit;
+      }
+      a:hover {
+        color: #535bf2;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      h1 {
+        font-size: 3.2em;
+        line-height: 1.1;
+      }
+
+      figure.svelteplot {
+        margin: 2em !important;
+      }
+
+      @media (prefers-color-scheme: light) {
+        :root {
+          color: #213547;
+          background-color: #ffffff;
+        }
+      }
+      figure.svelteplot h3 {
+        font-weight: normal;
+        font-size: 16px;
+      }
+      figure.svelteplot figcaption {
+        font-size: 12px;
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="plot-container" id="svelteplot-line"></div>
+    <div class="plot-container" id="svelteplot-tooltip"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
