@@ -4,7 +4,7 @@
     
 </script>
   
-<Plot grid title="Stack transform">
+<Plot marginLeft={50} title="Stack transform" color={{ legend: true }}>
     <Area fill="group" {...stackY({ 
         data: riaa, 
         x: 'year', 
